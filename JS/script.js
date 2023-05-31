@@ -35,6 +35,7 @@ let team = [
     }
 ]
 
+const team_container=document.getElementById('team');
 for(let i=0; i<team.length; i++){
     let team_group= team[i];
 
@@ -42,28 +43,15 @@ for(let i=0; i<team.length; i++){
         console.log(`${key}  ${team_group[key]}`);
     }
     console.log('---->');
+
+    let team_information= `<div class="team">
+        <p>${team_group.name}</p>
+        <p>${team_group.role}</p>
+        ${team_group.image}
+    </div>`
+
+    team_container.innerHTML += team_information
 }
 
-// console.log(team[0].name);
-// console.log(team[0].role);
-// console.log(team[0].image);
 
-// console.log(team[1].name);
-// console.log(team[1].role);
-// console.log(team[1].image);
 
-// console.log(team[2].name);
-// console.log(team[2].role);
-// console.log(team[2].image);
-
-// console.log(team[3].name);
-// console.log(team[3].role);
-// console.log(team[3].image);
-
-// console.log(team[4].name);
-// console.log(team[4].role);
-// console.log(team[4].image);
-
-// console.log(team[5].name);
-// console.log(team[5].role);
-// console.log(team[5].image);
