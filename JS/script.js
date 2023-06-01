@@ -39,15 +39,15 @@ const team_container=document.getElementById('team');
 for(let i=0; i<team.length; i++){
     let team_group= team[i];
 
-    for(let key in team_group){
-        console.log(`${key}  ${team_group[key]}`);
-    }
+    console.log(team_group.name);
+    console.log(team_group.role);
+    console.log(team_group.image);
     console.log('---->');
 
     let team_information= `<div class="team">
         <p>${team_group.name}</p>
         <p>${team_group.role}</p>
-        ${team_group.image}
+        ${team_group.image} <br> <br>
     </div>`
 
     team_container.innerHTML += team_information
